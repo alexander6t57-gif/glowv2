@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf9f7;
+}
+
+/* ===== TITLE ===== */
+.carousel-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 30px 0 20px;
+  color: #2c2c2c;
+}
+
+/* ===== TRACK ===== */
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 16px 30px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== SLIDE ===== */
+.slide {
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+}
+
+/* ===== IMAGE ===== */
+.slide img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* hide scrollbar */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
