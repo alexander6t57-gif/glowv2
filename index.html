@@ -6,58 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #faf9f7;
-}
-
-/* ===== TITLE ===== */
-.carousel-title {
-  text-align: center;
-  font-size: 22px;
-  margin: 20px 0;
-  color: white;
-}
-
-/* ===== TRACK ===== */
-.carousel-track {
+   .carousel-track {
   display: flex;
   gap: 16px;
   padding: 20px;
-
   overflow-x: auto;
-  scroll-behavior: smooth;
-
-  cursor: grab;
 }
 
-.carousel-track:active {
-  cursor: grabbing;
-}
-
-/* ===== SLIDE ===== */
 .slide {
   flex: 0 0 80%; /* mobile */
 }
 
-/* ===== IMAGE ===== */
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 320px; /* desktop fix 🔥 */
+  }
+}
+
 .slide img {
   width: 100%;
   border-radius: 16px;
   display: block;
-}
-
-/* ===== HIDE SCROLLBAR ===== */
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-/* ===== DESKTOP FIX 🔥 ===== */
-@media (min-width: 768px) {
-  .slide {
-    flex: 0 0 28%; /* أهم تعديل */
-  }
 }
   </style>
 
