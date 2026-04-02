@@ -12,44 +12,36 @@
   background: #faf9f7;
 }
 
-/* title */
+/* العنوان */
 .carousel-title {
   text-align: center;
   font-size: 24px;
   margin: 30px 0;
 }
 
-/* track */
+/* الكاروسيل */
 .carousel-track {
   display: flex;
+  overflow-x: auto;
   gap: 16px;
   padding: 20px;
 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  cursor: grab; /* مهم */
+  scroll-behavior: smooth;
 }
 
-/* drag effect */
-.carousel-track:active {
-  cursor: grabbing;
-}
-
-/* slides */
+/* 👇 أهم تعديل */
 .slide {
-  flex: 0 0 320px;
-  scroll-snap-align: start;
+  flex: 0 0 75%; /* بدل 300px */
 }
 
-/* images */
+/* الصور */
 .slide img {
   width: 100%;
   border-radius: 16px;
   display: block;
 }
 
-/* hide scrollbar */
+/* إخفاء scrollbar */
 .carousel-track::-webkit-scrollbar {
   display: none;
 }
