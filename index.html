@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Test Carousel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    /* ===== TEST (مهم) ===== */
-    body {
-      background: red; /* يجب أن تصبح الصفحة حمراء */
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* ===== TITLE ===== */
-    .carousel-title {
-      text-align: center;
-      font-size: 24px;
-      margin: 20px 0;
-      color: white;
-    }
-
-    /* ===== CAROUSEL ===== */
-    .carousel-track {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      padding: 20px;
-    }
-
-    .slide {
-      flex: 0 0 300px;
-    }
-
-    .slide img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-  </style>
-
-</head>
-
-<body>
+<div class="real-carousel">
 
   <h2 class="carousel-title">See It In Real Life</h2>
 
   <div class="carousel-track">
-
+    
     <div class="slide">
       <img src="https://res.cloudinary.com/dvnfuy27n/image/upload/v1775082818/1_p47kpv.jpg">
     </div>
@@ -62,5 +18,4 @@
 
   </div>
 
-</body>
-</html>
+</div>
