@@ -31,6 +31,7 @@ body {
   scroll-behavior: smooth;
 
   cursor: grab;
+  max-width: 100%;
 }
 
 .carousel-track:active {
@@ -42,12 +43,12 @@ body {
   flex: 0 0 80%; /* mobile */
 }
 
-/* ===== IMAGE (الحل الأساسي 🔥) ===== */
+/* ===== IMAGE ===== */
 .slide img {
   width: 100%;
-  height: 240px;           /* 👈 يمنع القص العشوائي */
-  object-fit: cover;       /* 👈 يعطي شكل احترافي */
-  object-position: center; /* 👈 يركز الصورة */
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 16px;
   display: block;
 }
@@ -57,10 +58,10 @@ body {
   display: none;
 }
 
-/* ===== DESKTOP FIX ===== */
+/* ===== DESKTOP FIX (الأهم 🔥) ===== */
 @media (min-width: 768px) {
   .slide {
-    flex: 0 0 320px; /* 👈 عرض ثابت = لا مشاكل */
+    flex: 0 0 420px; /* 👈 هذا هو الحل النهائي */
   }
 }
   </style>
