@@ -6,38 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ===== TEST (مهم) ===== */
     body {
-      background: red; /* يجب أن تصبح الصفحة حمراء */
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf9f7;
+}
 
-    /* ===== TITLE ===== */
-    .carousel-title {
-      text-align: center;
-      font-size: 24px;
-      margin: 20px 0;
-      color: white;
-    }
+/* title */
+.carousel-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0;
+}
 
-    /* ===== CAROUSEL ===== */
-    .carousel-track {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      padding: 20px;
-    }
+/* track */
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
 
-    .slide {
-      flex: 0 0 300px;
-    }
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
-    .slide img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
+  cursor: grab; /* مهم */
+}
+
+/* drag effect */
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+/* slides */
+.slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+/* images */
+.slide img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* hide scrollbar */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
   </style>
 
 </head>
