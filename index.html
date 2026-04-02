@@ -13,15 +13,7 @@ body {
   background: #faf9f7;
 }
 
-/* ===== TITLE ===== */
-.carousel-title {
-  text-align: center;
-  font-size: 22px;
-  margin: 20px 0;
-  color: #222;
-}
-
-/* ===== TRACK ===== */
+/* ===== SECTION WRAPPER 🔥 (الحل) ===== */
 .carousel-track {
   display: flex;
   gap: 16px;
@@ -31,16 +23,19 @@ body {
   scroll-behavior: smooth;
 
   cursor: grab;
+
+  /* 👇 أهم سطر */
   max-width: 100%;
 }
 
+/* drag */
 .carousel-track:active {
   cursor: grabbing;
 }
 
 /* ===== SLIDES ===== */
 .slide {
-  flex: 0 0 80%; /* mobile */
+  flex: 0 0 85%; /* mobile */
 }
 
 /* ===== IMAGE ===== */
@@ -48,9 +43,7 @@ body {
   width: 100%;
   height: 240px;
   object-fit: cover;
-  object-position: center;
   border-radius: 16px;
-  display: block;
 }
 
 /* ===== HIDE SCROLLBAR ===== */
@@ -58,12 +51,18 @@ body {
   display: none;
 }
 
-/* ===== DESKTOP FIX (الأهم 🔥) ===== */
+/* ===== DESKTOP FIX الحقيقي 🔥 ===== */
 @media (min-width: 768px) {
-  .slide {
-    flex: 0 0 420px; /* 👈 هذا هو الحل النهائي */
+
+  .carousel-track {
+    max-width: 900px;   /* 👈 هذا هو السر */
+    margin: 0 auto;     /* center */
   }
-}
+
+  .slide {
+    flex: 0 0 420px;
+  }
+
   </style>
 
 </head>
