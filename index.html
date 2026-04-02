@@ -6,27 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-   .carousel-track {
+   /* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf9f7;
+}
+
+/* ===== TITLE ===== */
+.carousel-title {
+  text-align: center;
+  font-size: 22px;
+  margin: 20px 0;
+  color: #222;
+}
+
+/* ===== TRACK ===== */
+.carousel-track {
   display: flex;
   gap: 16px;
   padding: 20px;
+
   overflow-x: auto;
+  scroll-behavior: smooth;
+
+  cursor: grab;
 }
 
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+/* ===== SLIDES ===== */
 .slide {
   flex: 0 0 80%; /* mobile */
 }
 
-@media (min-width: 768px) {
-  .slide {
-    flex: 0 0 320px; /* desktop fix 🔥 */
-  }
-}
-
+/* ===== IMAGE (الحل الأساسي 🔥) ===== */
 .slide img {
   width: 100%;
+  height: 240px;           /* 👈 يمنع القص العشوائي */
+  object-fit: cover;       /* 👈 يعطي شكل احترافي */
+  object-position: center; /* 👈 يركز الصورة */
   border-radius: 16px;
   display: block;
+}
+
+/* ===== HIDE SCROLLBAR ===== */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== DESKTOP FIX ===== */
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 320px; /* 👈 عرض ثابت = لا مشاكل */
+  }
 }
   </style>
 
