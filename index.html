@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Carousel</title>
+  <title>Test Carousel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ربط CSS -->
-  <link rel="stylesheet" href="main.css">
+  <style>
+    /* ===== TEST (مهم) ===== */
+    body {
+      background: red; /* يجب أن تصبح الصفحة حمراء */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== TITLE ===== */
+    .carousel-title {
+      text-align: center;
+      font-size: 24px;
+      margin: 20px 0;
+      color: white;
+    }
+
+    /* ===== CAROUSEL ===== */
+    .carousel-track {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .slide {
+      flex: 0 0 300px;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body>
